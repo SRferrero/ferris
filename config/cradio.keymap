@@ -10,9 +10,9 @@
 
 
 &mt {
-  //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
-};
+//   //  flavor = "tap-preferred";
+//    // tapping_term_ms = <200>;
+// };
 
 / { 
 
@@ -26,14 +26,20 @@
         
          combo_tab {
             timeout-ms = <50>;
-            key-positions = <10 11>;
+            key-positions = <11 12>;
             bindings = <&kp TAB>;
         };
         
-            combo_ralt {
+        combo_ent {
             timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
+	        key-positions = <27 28>;
+            bindings = <&kp RET>;
+        };
+
+        combo_ent {
+            timeout-ms = <50>;
+	        key-positions = <8 9>;
+            bindings = <&kp BSPC>;
         };
         
                     combo_lalt {
@@ -53,23 +59,69 @@
             timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp RGUI>;
+        };     
+    };
+    
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
-        
-
-        
+        hs: homerow_shifts {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFTS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        hsl: homerow_shifts_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFTS_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&to>;
+        };
+        td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+	    bl: layertap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYERTAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&to>, <&kp>;
+        };
     };
 
         keymap {
                 compatible = "zmk,keymap";
                 
-       		default_layer {
-		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I    &kp O   &kp P 
-		&kp A &kp S &kp D &kp F &kp G 			        	        &kp H &kp J &kp K &kp L &kp QUOT
-		&mt LSFT Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
-          				&mo 1 &kp LCTL  				&kp SPC &mo 2 
-		>;
-		};
+        default_layer {
+            bindings = <
+                &kp Q        &kp D      &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp ;
+                &kp A        &hm LCTL S &hm LALT H &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I      
+                &hs LSHIFT Z &kp X      &kp M      &kp C &kp V     &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH
+                                        //   &mo 1 &kp LCTL  				&kp SPC &mo 2 
+                            &mt NAV_L TAB  &kp RET     &mt 2 SPACE  &mt SYM_L BKSP
+            >;
+        };
 
        		left_layer {
 		bindings = <
