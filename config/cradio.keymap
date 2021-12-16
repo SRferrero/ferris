@@ -36,13 +36,13 @@
             bindings = <&kp RET>;
         };
 
-        combo_ent {
+        combo_bspc {
             timeout-ms = <50>;
 	        key-positions = <8 9>;
             bindings = <&kp BSPC>;
         };
         
-                    combo_lalt {
+        combo_lalt {
             timeout-ms = <50>;
             key-positions = <11 12>;
             bindings = <&kp LALT>;
