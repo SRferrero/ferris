@@ -117,9 +117,8 @@
             bindings = <
                 &kp Q        &kp D      &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SCLN
                 &kp A        &hm LCTL S &hm LALT H &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I      
-                &hs LSFT Z   &kp X      &kp M      &kp C &kp V     &kp K &kp L  &kp CMMA &kp DOT &hs RSHIFT FSLH
-                                        //   &mo 1 &kp LCTL  				&kp SPC &mo 2 
-                            &mt LGUI TAB  &to 1     &kp SPC  &kp RET
+                &hs LSFT Z   &kp X      &kp M      &kp C &kp V     &kp K &kp L  &kp CMMA  &kp DOT &hs RSHIFT FSLH
+                                           &mt LGUI TAB  &to 1     &kp SPC  &kp RET
             >;
         };
 
@@ -128,7 +127,7 @@
 		&kp BANG         &kp ATSN           &kp HASH         &kp DLLR           &kp PRCT    			&kp CRRT  &kp AMPS  &kp KMLT &kp LPRN &kp RPRN 
 		&kp LS(LA(DOWN)) &kp LS(LA(DOWN))   &hm LALT F12     &kp F2             &kp LG(LS(LC(N4))) 		&kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &kp BSLH
 		&kp ESC          &kp TILDE 	        &kp NON_US_BSLH  &kp LG(LS(LA(V)))  &kp TILDE2             	&kp UNDER &kp LEFT  &kp DOWN &kp RIGHT &kp PIPE 
-                                                                                &trans  &to 0		    &kp RGUI &to 2 
+                                                                                &trans  &to 0		    &trans &to 2 
 		>;
 		};
 		
@@ -136,19 +135,19 @@
         
 		right_layer {
 		bindings = <
-		&kp BANG   &kp ATSN     &kp LPAR    &kp RPAR &kp UNDER    		&kp MINUS &kp N7   &kp N8 &kp N9  &kp KMLT 
-		&bt BT_CLR &bt BT_SEL 1 &kp LBRC    &kp RBRC &kp PIPE 			&kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH
-		&kp LSFT   &bt BT_SEL 2 &kp LBKT    &kp RBKT &kp BSLH    		&kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL
+		&kp BANG &kp ATSN  &kp LPAR    &kp RPAR &kp UNDER    		&kp MINUS &kp N7   &kp N8 &kp N9  &kp KMLT 
+		&trans   &trans    &kp LBRC    &kp RBRC &kp PIPE 			&kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH
+		&kp LSFT &trans    &kp LBKT    &kp RBKT &kp BSLH    		&kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL
                                          &trans &to 0 				&kp CMMA &to 3 
 		>;
 		};	
 		
 		tri_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&kp E &kp E   &trans   &trans  &trans
-		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5  						&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
-		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
-					 &trans &to 0  					&trans &trans 
+		&bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans 			&kp E &kp E       &trans       &trans     &trans
+		&kp F1       &kp F2       &kp F3     &kp F4 &kp F5  		&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
+		&bt BT_CLR   &bt BT_NXT   &bt BT_PRV &kp F6 &kp F7   		&trans &kp PG_DN  &kp K_VOL_DN &trans     &trans   
+					                          &trans &to 0			&trans &trans 
 		>;
 		};	
         
