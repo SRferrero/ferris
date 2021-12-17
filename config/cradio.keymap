@@ -38,7 +38,7 @@
 
         combo_bspc {
             timeout-ms = <50>;
-	        key-positions = <8 9>;
+	        key-positions = <7 8>;
             bindings = <&kp BSPC>;
         };
         
@@ -117,7 +117,7 @@
             bindings = <
                 &kp Q        &kp D      &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SCLN
                 &kp A        &hm LCTL S &hm LALT H &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I      
-                &hs LSFT Z &kp X      &kp M      &kp C &kp V     &kp K &kp L  &kp CMMA &kp DOT &hs RSHIFT FSLH
+                &hs LSFT Z   &kp X      &kp M      &kp C &kp V     &kp K &kp L  &kp CMMA &kp DOT &hs RSHIFT FSLH
                                         //   &mo 1 &kp LCTL  				&kp SPC &mo 2 
                             &mt 1 TAB  &kp RET     &mt 2 SPC  &kp BKSP
             >;
