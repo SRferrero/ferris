@@ -20,7 +20,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
         
@@ -48,7 +48,7 @@
             bindings = <&kp LALT>;
         };
         
-                           combo_lgui {
+        combo_lgui {
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp LGUI>;
@@ -126,8 +126,8 @@
 		bindings = <
 		&kp BANG         &kp ATSN           &kp HASH         &kp DLLR           &kp PRCT    			&kp CRRT  &kp AMPS  &kp KMLT &kp LPRN &kp RPRN 
 		&kp LS(LA(DOWN)) &kp LS(LA(DOWN))   &hm LALT F12     &kp F2             &kp LG(LS(LC(N4))) 		&kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &kp QUOT
-		&kp ESC          &kp TILDE 	        &kp NON_US_BSLH  &kp LG(LS(LA(V)))  &kp TILDE2             	&kp UNDER &kp LEFT  &kp DOWN &kp RIGHT &kp PIPE 
-                                                                                &trans  &to 0		    &trans &to 2 
+		&hs LSFT GRAVE   &kp TILDE 	        &kp NON_US_BSLH  &kp LG(LS(LA(V)))  &kp TILDE2             	&kp UNDER &kp LEFT  &kp DOWN &kp RIGHT &kp PIPE 
+                                                                           &trans  &to 0		        &trans &to 2 
 		>;
 		};
 		
