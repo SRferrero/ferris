@@ -48,10 +48,10 @@
             bindings = <&to 4>;
         };
 
-        to_fn {
+        sl_fn {
             timeout-ms = <40>;
-            key-positions = <1 9>;
-            bindings = <&to 3>;
+            key-positions = <0 9>;
+            bindings = <&sl 3>;
         };
 
         to0 {
