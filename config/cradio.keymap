@@ -42,35 +42,35 @@
             bindings = <&kp LALT>;
         };
 
-        // combo_to_bt {
-        //     timeout-ms = <40>;
-        //     key-positions = <10 19>;
-        //     bindings = <&to 5>;
-        // };
+        combo_to_bt {
+            timeout-ms = <40>;
+            key-positions = <10 19>;
+            bindings = <&to 5>;
+        };
 
-        // combo_to_fn {
-        //     timeout-ms = <40>;
-        //     key-positions = <1 9>;
-        //     bindings = <&to 3>;
-        // };
+        combo_to_fn {
+            timeout-ms = <40>;
+            key-positions = <1 9>;
+            bindings = <&to 3>;
+        };
 
-        // combo_to0 {
-        //     timeout-ms = <40>;
-        //     key-positions = <1 2 3>;
-        //     bindings = <&to 0>;
-        // };
+        combo_to0 {
+            timeout-ms = <40>;
+            key-positions = <1 2 3>;
+            bindings = <&to 0>;
+        };
 
-        // combo_sl2 {
-        //     timeout-ms = <40>;
-        //     key-positions = <6 7 8>;
-        //     bindings = <&sl 2>;
-        // };
+        combo_sl2 {
+            timeout-ms = <40>;
+            key-positions = <6 7 8>;
+            bindings = <&sl 2>;
+        };
 
-        // combo_sl1 {
-        //     timeout-ms = <40>;
-        //     key-positions = <22 23>;
-        //     bindings = <&sl 1>;
-        // };
+        combo_sl1 {
+            timeout-ms = <40>;
+            key-positions = <22 23>;
+            bindings = <&sl 1>;
+        };
              
     };
 
@@ -142,8 +142,6 @@
                                                             &trans  &to 0		        &trans &to 2 
             >;
 		};
-		
-
         
 		right_layer {
             bindings = <
@@ -163,14 +161,14 @@
             >;
 		};	
 
-		bt_sys {
-            bindings = <
-                &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans 			&kp B  &trans     &trans       &trans     &trans
-                &trans       &trans       &trans     &trans &trans  		&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
-                &bt BT_CLR   &bt BT_NXT   &bt BT_PRV &trans &trans   		&trans &kp PG_DN  &kp K_VOL_DN &trans     &trans   
-                                                    &trans &to 0			&trans &trans 
-            >;
-		};	
+		// bt_sys {
+        //     bindings = <
+        //         &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans 			&kp B  &trans     &trans       &trans     &trans
+        //         &trans       &trans       &trans     &trans &trans  		&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
+        //         &bt BT_CLR   &bt BT_NXT   &bt BT_PRV &trans &trans   		&trans &kp PG_DN  &kp K_VOL_DN &trans     &trans   
+        //                                             &trans &to 0			&trans &trans 
+        //     >;
+		// };	
         
 	};
 };
